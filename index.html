@@ -5,11 +5,13 @@
     <title>DiGiNoMix Coin Marketcap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="DiGiNoMix Style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="APIstuff.js"></script>
   </head>
   <body>
 
     <div class="alert alert-primary" role="alert">
-      Welcome to the new kid on the block... 
+      Welcome to the new kid on the block...
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,20 +56,22 @@
            <tr>
              <th scope="col">Rank</th>
              <th scope="col">Name</th>
-             <th scope="col">Marketcap</th>
+             <th scope="col">Market Cap</th>
              <th scope="col">Price</th>
              <th scope="col">Volume (24h)</th>
              <th scope="col">Circulating Supply</th>
              <th scope="col">Change (24h)</th>
-             <th scope="col">Price Graph (7d)</th>
            </tr>
          </thead>
          <tbody>
            <tr>
-             <th scope="row">1</th>
-             <td>Bitcoin</td>
-             <td>$$$</td>
-             <td>$</td>
+             <th scope="row" id="coinRank"></th>
+             <td id="coinName"></td>
+             <td id="coinMktCap"></td>
+             <td id="coinPrice"></td>
+             <td id="coinVol"></td>
+             <td id="coinSupply"></td>
+             <td id="coin24h"></td>
            </tr>
            <tr>
              <th scope="row">2</th>
@@ -84,7 +88,6 @@
          </tbody>
        </table>
      </div>
-
 
   </body>
 </html>
