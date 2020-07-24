@@ -21,3 +21,11 @@ h4{
 .nav-item{
   text-align: left;
 }
+
+.positive{
+  color: green;
+}
+
+.negative{
+  color: red;
+}
