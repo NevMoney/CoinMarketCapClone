@@ -29,3 +29,7 @@ h4{
 .negative{
   color: red;
 }
+
+.notbold{
+    font-weight:normal
+}​
