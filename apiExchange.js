@@ -18,7 +18,7 @@ function displayExchange() {
         <td>${data[i].trade_volume_24h_btc.toFixed(2)} BTC</td>
         <td>${data[i].year_established}</td>
         <td>${data[i].country}</td>
-        <td><a href=${data[i].url}>${data[i].url}</a></td>
+        <td><a href=${data[i].url} target="_blank">${data[i].url}</a></td>
         </tr>`
         );
 
@@ -28,4 +28,9 @@ function displayExchange() {
 
 displayExchange();
 
-//$('.nav-tabs a[href="#Exchanges"]').tab('show')
+/*
+$("#Cryptocurrencies").click(function() {
+  $("#myDisplay").show();
+  $("#myExDisplay").hide();
+});
+*/

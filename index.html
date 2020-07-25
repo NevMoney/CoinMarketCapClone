@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -18,17 +17,17 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#Home">
+      <a class="navbar-brand" href="index.html">
         <img src="https://i.ibb.co/zrHTc7D/Di-Gi-No-Mix.png" width="30%" alt="DiGiNoMix Logo" loading="lazy">
       </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" id="crypto-link" href="#Cryptocurrencies">Cryptocurrencies<span class="sr-only">(current)</span></a>
+            <a class="nav-link" id="crypto-link" href="index.html">Cryptocurrencies<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="exchange-link" href="#Exchanges">Exchanges</a>
+            <a class="nav-link" id="exchange-link" href="exchange.html">Exchanges</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -43,30 +42,39 @@
     <h1>Top 100 Cryptocurrencies by Market Capitalization</h1>
     <h4>Project by Nev K.</h4>
 
-    <br>
-
       <div class="col-10 mx-auto">
            <ul class="nav nav-tabs large" role="tablist">
-               <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Cryptocurrencies" role="tab">Cryptocurrencies</a></li>
-               <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Exchanges" role="tab">Exchanges</a></li>
-               <li class="nav-item ml-auto"><a class="nav-link" data-toggle="tab" href="#Next100" role="tab" type="button">Next 100 &#8594;</a></li>
+               <li class="nav-item">
+                 <a class="nav-link active" id="Cryptocurrencies" href="Cryptocurrencies" data-toggle="tab" role="tab" aria-controls="Cryptocurrencies" aria-selected="true">Cryptocurrencies</a></li>
+               <li class="nav-item">
+                 <a class="nav-link" id="Exchanges" href="Exchanges" data-toggle="tab" role="tab" aria-controls="Exchanges" aria-selected="false">Exchanges</a></li>
+               <li class="nav-item ml-auto">
+                 <a class="nav-link" data-toggle="tab" href="#tab22" role="tab">Next 100 &#8594;</a></li>
            </ul>
 
+           <div class="tab-content" id="myTabContent">
+             <div class="tab-pane fade show active" id="Cryptocurrencies" role="tabpanel">
+               <div class="container col-12">
+                 <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Market Cap</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Volume (24h)</th>
+                      <th scope="col">Circulating Supply</th>
+                      <th scope="col">Change (24h)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="myDisplay"></tbody>
+                </table>
+             </div>
+             <div class="tab-pane fade" id="Exchanges" role="tabpanel">...</div>
+             <div class="tab-pane fade" id="Next100" role="tabpanel">...</div>
+          </div>
+        </div>
 
-        <table class="table">
-         <thead>
-           <tr>
-             <th scope="col">Rank</th>
-             <th scope="col">Name</th>
-             <th scope="col">Market Cap</th>
-             <th scope="col">Price</th>
-             <th scope="col">Volume (24h)</th>
-             <th scope="col">Circulating Supply</th>
-             <th scope="col">Change (24h)</th>
-           </tr>
-         </thead>
-         <tbody id="myExDisplay"></tbody>
-       </table>
 
   </body>
 </html>
