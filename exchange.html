@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="diGiNoMixStyle.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="apiStuff.js"></script>
+    <script src="apiExchange.js"></script>
   </head>
   <body>
 
@@ -24,11 +24,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" id="crypto-link" href="#Cryptocurrencies">Cryptocurrencies<span class="sr-only">(current)</span></a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" id="exchange-link" href="#Exchanges">Exchanges</a>
+            <a class="nav-link" id="crypto-link" href="#Cryptocurrencies">Cryptocurrencies</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" id="exchange-link" href="#Exchanges">Exchanges<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -40,33 +40,37 @@
 
     <hr>
 
-    <h1>Top 100 Cryptocurrencies by Market Capitalization</h1>
-    <h4>Project by Nev K.</h4>
+    <h1>Top Cryptocurrency Exchanges</h1>
+    <h4>DiGiNoMix Ranks Exchanges Based On Their Trust Score</h4>
 
     <br>
 
-      <div class="col-10 mx-auto">
+    <div class="col-10 mx-auto">
            <ul class="nav nav-tabs large" role="tablist">
-               <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Cryptocurrencies" role="tab">Cryptocurrencies</a></li>
-               <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Exchanges" role="tab">Exchanges</a></li>
-               <li class="nav-item ml-auto"><a class="nav-link" data-toggle="tab" href="#Next100" role="tab" type="button">Next 100 &#8594;</a></li>
+               <li class="nav-item"><a class="nav-link" id="crypto-tab" data-toggle="tab" href="#Cryptocurrency" role="tab" aria-controls="Cryptocurrencies" aria-selected="false">Cryptocurrencies</a></li>
+               <li class="nav-item"><a class="nav-link active" id="exchanges-tab" data-toggle="tab" href="#Exchanges" role="tab" aria-controls="Exchanges" aria-selected="true">Exchanges</a></li>
+               <li class="nav-item ml-auto"><a class="nav-link" id="Next100" data-toggle="tab" href="#Next100" role="tab" aria-controls="Next 100" aria-selected="false">Next 100 &#8594;</a></li>
            </ul>
+       <div class="tab-content" id="myTabContent">
+         <div class="tab-pane fade" id="Cryptocurrencies" role="tabpanel" aria-labelledby="profile-tab">...</div>
+         <div class="tab-pane fade show active" id="Exchanges" role="tabpanel" aria-labelledby="contact-tab">...</div>
+         <div class="tab-pane fade" id="Next100" role="tabpanel" aria-labelledby="home-tab">...</div>
+       </div>
 
-
-        <table class="table">
-         <thead>
-           <tr>
-             <th scope="col">Rank</th>
-             <th scope="col">Name</th>
-             <th scope="col">Market Cap</th>
-             <th scope="col">Price</th>
-             <th scope="col">Volume (24h)</th>
-             <th scope="col">Circulating Supply</th>
-             <th scope="col">Change (24h)</th>
-           </tr>
-         </thead>
-         <tbody id="myExDisplay"></tbody>
-       </table>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Name</th>
+            <th scope="col">Trust Score</th>
+            <th scope="col">Volume (24h)</th>
+            <th scope="col">Year Launched</th>
+            <th scope="col">Location</th>
+            <th scope="col">Website</th>
+          </tr>
+        </thead>
+        <tbody id="myExDisplay"></tbody>
+      </table>
 
   </body>
 </html>
