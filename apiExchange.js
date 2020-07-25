@@ -27,3 +27,5 @@ function displayExchange() {
 }
 
 displayExchange();
+
+//$('.nav-tabs a[href="#Exchanges"]').tab('show')
