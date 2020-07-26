@@ -28,9 +28,15 @@ function displayExchange() {
 
 displayExchange();
 
+
 /*
 $("#Cryptocurrencies").click(function() {
   $("#myDisplay").show();
   $("#myExDisplay").hide();
+});
+
+$("#Exchanges").click(function() {
+  $("#myDisplay").hide();
+  $("#myExDisplay").show();
 });
 */
