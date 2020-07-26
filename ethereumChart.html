@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>DiGiNoMix Crypto Exchanges</title>
+    <title>DiGiNoMix Bitcoin Chart Page</title>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -27,14 +27,14 @@
           <li class="nav-item">
             <a class="nav-link" id="crypto-link" href="index.html">Cryptocurrencies</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" id="exchange-link" href="exchange.html">Exchanges<span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" id="exchange-link" href="exchange.html">Exchanges</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="bitcoin-link" href="bitcoinChartPage.html">Bitcoin Chart</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="eth-link" href="ethereumChart.html">Ethereum Chart</a>
+          <li class="nav-item active">
+            <a class="nav-link" id="eth-link" href="ethereumChart.html">Ethereum Chart<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -46,42 +46,35 @@
 
     <hr>
 
-    <h1>Top Cryptocurrency Exchanges</h1>
-    <h4>DiGiNoMix Ranks Exchanges Based On Their Trust Score</h4>
+    <h1>Ethereum Chart</h1>
+    <h4>Analyze Top DeFi Powering Cryptocurrency: Ethereum</h4>
 
-    <br>
+    <br>  <br>
 
-    <div class="col-10 mx-auto">
-           <ul class="nav nav-tabs large" role="tablist">
-               <li class="nav-item">
-                 <a class="nav-link" id="Cryptocurrencies" href="Cryptocurrencies" data-toggle="tab" role="tab" aria-controls="Cryptocurrencies" aria-selected="false">Cryptocurrencies</a></li>
-               <li class="nav-item">
-                 <a class="nav-link active" id="Exchanges" href="Exchanges" data-toggle="tab" role="tab" aria-controls="Exchanges" aria-selected="true">Exchanges</a></li>
-               <li class="nav-item ml-auto">
-                 <a class="nav-link" data-toggle="tab" href="#Next100" role="tab">Next 100 &#8594;</a></li>
-           </ul>
-       <div class="tab-content" id="myTabContent">
-         <div class="tab-pane fade" id="Cryptocurrencies" role="tabpanel" aria-labelledby="profile-tab">...</div>
-         <div class="tab-pane fade show active" id="Exchanges" role="tabpanel" aria-labelledby="contact-tab">
-           <table class="table">
-               <thead>
-                 <tr>
-                   <th scope="col">Rank</th>
-                   <th scope="col">Name</th>
-                   <th scope="col">Trust Score</th>
-                   <th scope="col">Volume (24h)</th>
-                   <th scope="col">Year Launched</th>
-                   <th scope="col">Location</th>
-                   <th scope="col">Website</th>
-                 </tr>
-               </thead>
-               <tbody id="myExDisplay"></tbody>
-             </table>
-         </div>
-         <div class="tab-pane fade" id="Next100" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div id="tradingview_e4180"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRAKEN-ETHUSD/" rel="noopener" target="_blank"><span class="blue-text">ETHUSD Chart</span></a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+            new TradingView.widget({
+              "autosize": false,
+              "symbol": "KRAKEN:ETHUSD",
+              "interval": "W",
+              "timezone": "Etc/UTC",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": true,
+              "withdateranges": true,
+              "hide_side_toolbar": false,
+              "allow_symbol_change": true,
+              "container_id": "tradingview_e4180"
+          });
+          </script>
       </div>
-    </div>
-
+    <!-- TradingView Widget END -->
     <br><br><br><br>
 
     <style>
@@ -98,6 +91,7 @@
     <div class="footer">
       <p>(c) 2020 DiGiNoMix. All Rights Reserved.</p>
     </div>
+
 
   </body>
 </html>
