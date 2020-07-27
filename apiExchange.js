@@ -28,9 +28,9 @@ function displayExchange() {
 
 displayExchange();
 
-/*
-$("#Cryptocurrencies").click(function() {
-  $("#myDisplay").show();
-  $("#myExDisplay").hide();
+
+$("#crypto-tab").click(function() {
+  $("#Cryptocurrencies").show();
+  $("#Exchanges").hide();
+  console.log("tab clicked")
 });
-*/
