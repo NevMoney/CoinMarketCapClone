@@ -25,7 +25,6 @@
     />
     <link rel="stylesheet" type="text/css" href="diGiNoMixStyle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="indexPgApi.js"></script>
   </head>
   <body>
     <div class="alert alert-primary" role="alert">
@@ -90,26 +89,12 @@
     <div class="col-10 mx-auto">
       <ul class="nav nav-tabs large" role="tablist">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            id="crypto-tab"
-            href="Cryptocurrencies"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="Cryptocurrencies"
-            aria-selected="true"
+          <a class="nav-link active" id="crypto-tab" href="index.html"
             >Cryptocurrencies</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            id="exchange-tab"
-            href="Exchanges"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="Exchanges"
-            aria-selected="false"
+          <a class="nav-link" id="exchange-tab" href="exchange.html"
             >Exchanges</a
           >
         </li>
@@ -164,5 +149,8 @@
     <div class="footer">
       <p>(c) 2020 DiGiNoMix. All Rights Reserved.</p>
     </div>
+
+    <!-- to display api click must put on bottom to run -->
+    <script src="indexPgApi.js"></script>
   </body>
 </html>
