@@ -6,6 +6,7 @@ let url = BASE_URL + COIN_LIST_ENDPOINT;
 function displayAPI() {
   fetch(url).then(function (res) {
     res.json().then(function (data) {
+      $("#loading").hide();
       for (let i = 0; i < data.length; i++) {
         let color24 = "";
         if (data[i].price_change_percentage_24h > 0) {
