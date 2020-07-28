@@ -1,7 +1,6 @@
 let BASE_URL = "https://api.coingecko.com/api/v3";
-var pgNumb = ``;
-let COIN_LIST_ENDPOINT =
-  "/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h";
+var pgNumb = `1`;
+let COIN_LIST_ENDPOINT = `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pgNumb}&sparkline=false&price_change_percentage=24h`;
 let url = BASE_URL + COIN_LIST_ENDPOINT;
 
 function displayAPI() {
@@ -46,4 +45,11 @@ $("#exchange-tab").click(function () {
   $("#Cryptocurrencies").hide();
   $("#Exchanges").show();
   console.log("tab clicked");
+});
+
+$("#next-tab").click(function () {
+  for (let i = 0; i < pgNumb.length; i++) {
+    pgNumb = +1;
+    console.log("page active");
+  }
 });
