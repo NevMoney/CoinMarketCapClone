@@ -50,5 +50,6 @@ $("#exchange-tab").click(function () {
 $("#next-tab").click(function () {
   for (let i = 0; i < pgNumb.length; i++) {
     pgNumb = +1;
+    console.log("page active");
   }
 });

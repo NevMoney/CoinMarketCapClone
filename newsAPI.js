@@ -11,11 +11,11 @@ function displayNews() {
     for (let i = 0; i < news.length; i++) {
       $("#myNewsDisplay").append(
         `<tr>
-        <td><img width=18px src=${news[i].image}>&nbsp;<strong>${news[i].title}</stong></td>
+        <td><strong>${news[i].title}</stong></td>
         <td>${news[i].description}</td>
-        <td>${news[i].source} BTC</td>
+        <td><a href=${news[i].sourceLink} target="_blank">${news[i].source}</td>
         <td>${news[i].feedDate}</td>
-        <td>${news[i].relatedCoins}</td>
+        <td>${news[i].searchKeyWords}</td>
         </tr>`
       );
     }
