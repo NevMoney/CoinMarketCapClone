@@ -68,6 +68,7 @@ $("#next-tab").click(function () {
   console.log(url);
   $("#myDisplay").empty();
   $("#prev-tab").show();
+
   displayAPI();
 });
 
