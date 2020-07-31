@@ -63,9 +63,7 @@ $("#exchange-tab").click(function () {
 $("#next-tab").click(function () {
   pgNumb++;
   console.log(pgNumb);
-  let BASE_URL = "https://api.coingecko.com/api/v3";
-  let COIN_LIST_ENDPOINT = `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pgNumb}&sparkline=false&price_change_percentage=24h`;
-  let url = BASE_URL + COIN_LIST_ENDPOINT;
+
   console.log(url);
   displayAPI();
 });
