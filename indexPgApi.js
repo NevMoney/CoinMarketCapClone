@@ -3,9 +3,21 @@ var pgNumb = `1`;
 let COIN_LIST_ENDPOINT = `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pgNumb}&sparkline=false&price_change_percentage=24h`;
 let url = BASE_URL + COIN_LIST_ENDPOINT;
 
+//hide previous tab on first page
+function hideTabs() {
+  if (pgNumb == 1);
+  $("#prev-tab").hide();
+  if (pgNumb == pgNumb.length);
+  $("next-tab").hide();
+}
+
+hideTabs();
+
+//fetch and display api data
 function displayAPI() {
   fetch(url).then(function (res) {
     res.json().then(function (data) {
+      $("#loading").hide();
       for (let i = 0; i < data.length; i++) {
         let color24 = "";
         if (data[i].price_change_percentage_24h > 0) {
@@ -41,15 +53,61 @@ function displayAPI() {
 
 displayAPI();
 
+//change to exchanges page
 $("#exchange-tab").click(function () {
   $("#Cryptocurrencies").hide();
   $("#Exchanges").show();
   console.log("tab clicked");
 });
 
+/*
+//display api pagination
+function nextPage() {
+  i = i + 1;
+  i = i % pgNumb.length;
+  return pgNumb[i];
+}
+
+function prevPage() {
+  if (i === 0) {
+    i == pgNumb.length;
+  }
+  i = i - 1;
+  return pgNumb[i];
+}
+
+document.getElementById("myDisplay").textContent = pgNumb[i];
+
+document.getElementById("prev-tab").addEventListener("click", function (e) {
+  document.getElementById("myDisplay").textContent = prevPage();
+});
+
+document.getElementById("next-tab").addEventListener("click", function (e) {
+  document.getElementById("myDisplay").textContent = nextPage();
+});
+
+window.addEventListener("load", function () {
+  $("#myDisplay").append(
+    `<tr>
+    <th scope="row" class="notbold">${i + 1}</th>
+    <td><img width=16px src=${data[i].image}>&nbsp;<strong>${
+      data[i].name
+    }</stong></td>
+    <td>$${mc}</td>
+    <td>$${p}</td>
+    <td>$${v}</td>
+    <td>${cs} ${data[i].symbol.toUpperCase()}</td>
+    <td class="${color24}">${data[i].price_change_percentage_24h.toFixed(
+      2
+    )}%</td>
+  </tr>`
+  );
+});
+*/
+
 $("#next-tab").click(function () {
   for (let i = 0; i < pgNumb.length; i++) {
-    pgNumb = +1;
-    console.log("page active");
+    pgNumb++;
+    $("#myDisplay").show();
   }
 });

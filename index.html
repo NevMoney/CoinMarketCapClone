@@ -2,6 +2,11 @@
   <head>
     <meta charset="utf-8" />
     <title>DiGiNoMix Coin Marketcap</title>
+    <link
+      rel="icon"
+      href="https://i.ibb.co/D5jy9xX/DM.png"
+      type="image/icon type"
+    />
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -98,17 +103,31 @@
             >Exchanges</a
           >
         </li>
-        <li class="nav-item ml-auto">
-          <a class="nav-link" id="next-tab" href="nextPage">Next 100 &#8594;</a>
-        </li>
+        <div class="d-flex flex-row-reverse ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="next-tab" href="nextPage"
+              >Next 100 &#8594;</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="prev-tab" href="prevPage"
+              >Previous 100 &#8592;</a
+            >
+          </li>
+        </div>
       </ul>
-
       <div class="tab-content" id="myTabContent">
         <div
           class="tab-pane fade show active"
           id="Cryptocurrencies"
           role="tabpanel"
         >
+          <div class="d-flex justify-content-center">
+            <div id="loading" class="spinner-border text-warning" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+
           <div class="container col-12">
             <table class="table">
               <thead>
@@ -126,7 +145,7 @@
             </table>
           </div>
           <div class="tab-pane fade" id="Exchanges" role="tabpanel">...</div>
-          <div class="tab-pane fade" id="Next100" role="tabpanel">...</div>
+          <div class="tab-pane fade" id="Next100" role="tabpanel"></div>
         </div>
       </div>
     </div>
