@@ -60,7 +60,21 @@ $("#exchange-tab").click(function () {
   console.log("tab clicked");
 });
 
+$("#next-tab").click(function () {
+  pgNumb++;
+  console.log(pgNumb);
+  let BASE_URL = "https://api.coingecko.com/api/v3";
+  let COIN_LIST_ENDPOINT = `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pgNumb}&sparkline=false&price_change_percentage=24h`;
+  let url = BASE_URL + COIN_LIST_ENDPOINT;
+  console.log(url);
+  displayAPI();
+});
+
 /*
+var loc = location.href;
+loc += loc.indexOf("?") == -1 ? "?" : "&";
+location.href = loc + pgNumb;
+
 //display api pagination
 function nextPage() {
   i = i + 1;
@@ -104,10 +118,3 @@ window.addEventListener("load", function () {
   );
 });
 */
-
-$("#next-tab").click(function () {
-  for (let i = 0; i < pgNumb.length; i++) {
-    pgNumb++;
-    $("#myDisplay").show();
-  }
-});
