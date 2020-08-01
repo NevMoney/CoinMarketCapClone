@@ -32,7 +32,7 @@ function displayAPI() {
 
         $("#myDisplay").append(
           `<tr>
-          <th scope="row" class="notbold">${i + 1}</th>
+          <th scope="row" class="notbold">${(pgNumb - 1) * 100 + i + 1}</th>
           <td><img width=16px src=${data[i].image}>&nbsp;<strong>${
             data[i].name
           }</stong></td>
